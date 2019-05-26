@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>任务窗口</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script language="javascript">
+      var t = null;
+      t = setTimeout(time,1000);
+      function time()
+      {
+        clearTimeout(t);
+        dt = new Date();
+        var y=dt.getYear()+1900;
+        var mm=dt.getMonth()+1;
+        var d=dt.getDate();
+        var day=dt.getDay();
+        var h=dt.getHours();
+        var m=dt.getMinutes();
+        var s=dt.getSeconds();
+        if(h<10){h="0"+h;}
+        if(m<10){m="0"+m;}
+        if(s<10){s="0"+s;}
+        document.getElementById("timeShow").innerHTML = "当前日期为："+d+"/"+mm+"/"+y;
+        t = setTimeout(time,1000);
+      }
+    </script>
+<style>
+body{
+  background: url("../image/背景.PNG") no-repeat;
+  /*请修改背景图片路径*/
+
+
+
+  background-size:cover;
+}
+.con1{
+  background: #00DD77;
+  width: 100%;
+  height: 50px;
+}
+.con2{
+  padding: 1%;
+  margin-top: 1%;
+}
+.hz{
+  background: #fff;
+  /*圆角 */
+  border-radius: 5px;
+}
+.hz-img{
+  width: 37px;
+  height: 37px;
+}
+.hz-text{
+  font-size: 23px;
+  padding-top: 5px;
+  font-weight: bold;
+}
+.sub-hz{
+  margin-top:20px;
+}
+.red-num{
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  padding: 10%;
+}
+.time1{
+  width: 50%;
+  height: 35px;
+  float: right;
+  background: #00DD77;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.learn{
+  padding-top: 45px;
+  font-weight: bolder;
+}
+.con3{
+  background: red;
+  width: 80%;
+  margin-left: 10%;
+  height: 35px;
+  border: 1px solid black;
+}
+.con4{
+  background: white;
+  width: 80%;
+  margin-left: 10%;
+  height: 90px;
+  border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+  <div class="con1">
+    <div class="hz-text">
+      <div class="col-xs-4">
+        <a style="color:white;font-size:25px" href=""><strong>←</strong></a>
+        <!-- 添加返回连接 herf=...  -->
+
+
+
+      </div>
+      <div class="col-xs-5">
+        <text style="color:white">任务清单</text>
+      </div>
+    </div>
+  </div>
+
+  <div class="con2">
+    <div class="col-xs-12 hz">
+      <div class="col-xs-12">
+        <image class="hz-img" src="../image/汇总任务.png"></image>
+        <!-- 放入汇总任务图片路径 -->
+
+
+
+        <text class="hz-text">汇总任务</text>
+      </div>
+      <hr>
+      <div class="col-xm-12 sub-hz">
+          <div class="col-xs-4 sub-hz-k" style="padding-bottom:5px">
+            <div>
+              <p class="red-num">0</p>
+              <div class="sub-hz-text" style="text-align:center"><strong>累计完成任务</strong></div>
+            </div>
+          </div>
+
+          <div class="col-xs-4">
+            <div>
+              <p class="red-num">0</p>
+              <div class="sub-hz-text" style="text-align:center"><strong>今日完成任务</strong></div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div>
+              <p class="red-num">0</p>
+              <div class="sub-hz-text" style="text-align:center"><strong>本月完成任务</strong></div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="con2" style="margin-top:140px;">
+    <div class="col-xs-12 hz">
+      <div class="col-xs-12">
+        <image class="hz-img" src="../image/任务单-is.png"></image>
+        <!-- 添加任务单图片路径 -->
+
+
+
+        <text class="hz-text">任务单</text>
+      </div>
+      <hr>
+      <div>
+        <p id="timeShow" class="time1" style="color:white"></p>
+        <div>
+          <li class="learn">学习</li>
+          <div class="con3">
+            <text class="col-xs-6 sub-hz-k" style="text-align:center "><strong style="color:white">任务</strong></text>
+            <text class="col-xs-6 sub-hz-k" style="text-align:center "><strong style="color:white">获取番茄数</strong></text>
+          </div>
+          <div class="con4">
+            <input type="text" style="outline:none;border:0" />
+            <input type="text" style="outline:none;border:0" />
+            <input type="text" style="outline:none;border:0" />
+            <input type="text" style="outline:none;border:0" />
+          </div>
+          <li class="learn">工作</li>
+          <div class="con3">
+            <text class="col-xs-6 sub-hz-k" style="text-align:center "><strong style="color:white">任务</strong></text>
+            <text class="col-xs-6 sub-hz-k" style="text-align:center "><strong style="color:white">获取番茄数</strong></text>
+          </div>
+          <div class="con4 input">
+            <input type="text" style="outline:none;border:0" />
+            <input type="text" style="outline:none;border:0" />
+            <input type="text" style="outline:none;border:0" />
+            <input type="text" style="outline:none;border:0" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

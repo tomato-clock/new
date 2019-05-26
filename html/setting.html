@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>种树</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+    <script src="../js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+    body{
+      background: url("../image/setting.PNG") no-repeat;
+      background-size:cover;
+    }
+    .con1{
+      background: #00DD77;
+      width: 100%;
+      height: 50px;
+    }
+    /*铃声样式*/
+    .con2-1{
+      /*padding: 10px;
+      margin-top: 3px;*/
+      width: 450px;
+      height: 50px;
+      border:1px solid white;
+      margin:0 auto;
+
+    }
+    .con3-1{
+      /*padding: 10px;
+      margin-top: 3px;*/
+      width: 450px;
+      height: 50px;
+      border:1px solid white;
+      margin:0 auto;
+    }
+    .con4-1{
+      /*padding: 10px;
+      margin-top: 3px;*/
+      width: 450px;
+      height: 50px;
+      border:1px solid white;
+      margin:0 auto;
+    }
+    .con4-2{
+      /*padding: 10px;
+      margin-top: 3px;*/
+      width: 450px;
+      height: 35px;
+      border:1px solid white;
+      margin:0 auto;
+    }
+    .con3-2{
+      /*padding: 10px;
+      margin-top: 3px;*/
+      width: 450px;
+      height: 50px;
+      border:1px solid white;
+      margin:0 auto;
+
+    }
+    .con2-2{
+      /*padding: 10px;
+      margin-top: 3px;*/
+      width: 450px;
+      height: 50px;
+      border:1px solid white;
+      margin:0 auto;
+    }
+    .con3-3{
+      /*padding: 10px;
+      margin-top: 3px;*/
+      width: 450px;
+      height: 50px;
+      border:1px solid white;
+      margin:0 auto;
+    }
+    /*振动提醒样式*/
+    .con2-2-1{
+      position:absolute;
+      left:16px;
+      top:120px;
+
+    }
+    /*每日提醒样式*/
+    .con3-3-1{
+      position:absolute;
+      left:16px;
+      top:300px;
+    }
+    /*开关按钮样式*/
+    .con2-2-2{
+      position:absolute;
+      left:250px;
+      top:120px;
+
+    }
+    /*开关按钮样式*/
+    .con3-3-2{
+      position:absolute;
+      left:250px;
+      top:300px;
+    }
+    .hz{
+      background: #fff;
+      /*圆角 */
+      /*background-color:rgba(0,0,0,0.5);*/
+      border-radius: 1px;
+    }
+    .hz-text{
+      font-size: 20px;
+      font-weight: lighter;
+    }
+    .hz-text1{
+      font-color: white;
+    }
+    /*以下是开关按钮配置样式*/
+    .chooseBtn {
+        display: none;
+    }
+
+    .choose-label {
+        box-shadow: #ccc 0px 0px 0px 1px;
+        width: 40px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 20px;
+        position: relative;
+        background-color: #bdbdbd;
+        overflow: hidden;
+    }
+
+    .choose-label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 20;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .chooseBtn:checked + label.choose-label:before {
+        left: 20px;
+    }
+
+    .chooseBtn:checked + label.choose-label {
+        background-color: #51ccee;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="con1">
+      <div class="hz-text">
+        <div class="col-xs-4">
+          <a style="color:white;font-size:32px"><strong>←</strong></a>
+        </div>
+        <div class="col-xs-5">
+          <text style="color:white">设置</text>
+        </div>
+      </div>
+    </div>
+
+    <div class="con2">
+      <div class="con2-1">
+          <text style="color:black ">铃声</text>
+      </div>
+      <div class="con2-2">
+        <div class="con2-2-1">
+          <text style="color:black">振动提醒</text>
+            </div>
+            <div class="con2-2-2">
+          <input type="checkbox" name="remind" id="remind" class="chooseBtn" />
+          <label for="remind" class="choose-label"></label>
+          </div>
+      </div>
+      </div>
+    <hr>
+   <div class="con3">
+     <div class="con3-1">
+      <text style="color:black">番茄时长</text>
+      </div>
+      <div class="con3-2">
+       <text style="color:black">休息时长</text>
+       </div>
+      <div class="con3-3">
+        <div class="con3-3-1">
+          <text style="color:black">每日提醒</text>
+            </div>
+            <div class="con3-3-2">
+          <input type="checkbox" name="remind" id="remind" class="chooseBtn" />
+          <label for="remind" class="choose-label"></label>
+          </div>
+          </div>
+          </div>
+    <hr>
+        <div class="con4">
+          <div class="con4-1">
+          <text style="color:black">常见问题</text>
+            </div>
+            <div class="con4-2">
+            <text style="color:black">关于番茄时钟</text>
+              </div>
+              </div>
+</html>
