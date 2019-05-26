@@ -1,0 +1,68 @@
+/*body{
+background:url(../img/bg.PNG)no-repeat
+}*/
+/*header的默认设置*/
+.w{
+
+	width:360px;
+	height:135px;
+}
+.touxiang{
+	width:72px;
+	height:72px;
+	float:none;
+	padding-left: 114px;
+	padding-right:30px;
+}
+.setting{
+	width:22px;
+	height: 23px;
+	margin-right:5px;
+	margin-left:33px;
+	padding-left:180px;
+	padding-right:10px;
+	float:left;
+	padding-bottom: 2px;
+	padding-top:5px;
+}
+.content{
+	height:524px;
+	width:360px;
+	background-image: url(../img/bg.PNG);
+}
+.box1,.box2,.box3,.box4,.box5,.box6{
+	height:60px;
+	width:50px;
+	margin-right:39px;
+	margin-left:39px;
+	padding-left:25px ;
+	padding-right: 25px;
+	margin-bottom:10px;
+	margin-top:20px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	float:left;
+	border:1px solid:#000;
+	background-color: #FFFFCC;
+}
+h1{
+	font-size: 12px;
+	color: #000000;
+}
+.fanhui{
+	width:22px;
+	height:22px;
+	margin-left: 10px;
+	margin-right:18px;
+	padding-left:10px;
+	padding-right:50px;
+	float:left;
+	padding-bottom: 2px;
+	padding-top:5px;
+
+}
+h2{
+	font-size: 14px;
+	color:#000000;
+	text-align: center;
+}
